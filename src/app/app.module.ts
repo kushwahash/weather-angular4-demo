@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import {CityService} from './city.service';
+import { CityComponent } from './components/city/city.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent
+    WeatherComponent,
+    CityComponent
   ],
   imports: [
     BrowserModule
