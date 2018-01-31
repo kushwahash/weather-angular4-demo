@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { CityComponent } from './components/city/city.component';
 import { CityService } from './service/city/city.service';
+import { WeatherService } from './service/weather/weather.service';
+import { DataService } from './service/data/data.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { CityService } from './service/city/city.service';
     CityComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [CityService],
+  providers: [CityService, WeatherService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

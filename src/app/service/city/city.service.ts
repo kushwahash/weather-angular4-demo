@@ -1,19 +1,29 @@
 import { Injectable } from '@angular/core';
 import { City } from '../../components/city/city';
 import { Http, Response } from '@angular/http';
+import { Weather } from '../../components/weather/weather';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class CityService {
-  private apiUrl = 'http://localhost:8080/users';
+  private cityapiUrl = '../getCityList';
+  private weatherapiUrl = '../getWeatherByCity';
+
   constructor(private http: Http) { }
     init() {
     }
 
    findAllCities(): Observable<City[]>  {
-    return this.http.get(this.apiUrl)
+    return this.http.get(this.cityapiUrl)
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  findWeatherByCity(city: string): Observable<Weather>  {
+    const q = '?city='.concat(city);
+    return this.http.get(this.weatherapiUrl.concat(q))
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }

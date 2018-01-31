@@ -25,8 +25,8 @@ html,body,.wrapper{
 }
 .weather{
   position: relative;
-  height: 275px;
-  width: 400px;
+  height: 295px;
+  width: 450px;
 background: #7abcff; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */

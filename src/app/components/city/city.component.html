@@ -1,7 +1,8 @@
 
 <section class="webdesigntuts-workshop">
-	<form action="" method="">		    
-		<input type="search" placeholder="City For Weather Report...">		    	
-		<button>Search</button>
+	<form>
+		<input type="search" placeholder="City For Weather Report..." #city>
+		<button type="button" (click)="callWeatherService(city)">Search</button>
 	</form>
+
 </section>
