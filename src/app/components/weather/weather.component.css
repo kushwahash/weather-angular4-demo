@@ -18,14 +18,70 @@ html,body,.wrapper{
   width: 100%;
 }
 .wrapper{
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/45816/IMG_00000159_hdr.jpg');
   background-size: cover;
   background-attachment: fixed; 
   position: absolute;
 }
+
+.wrapperclearsky{
+  background: url('http://images.greece.com/panoramio/07/19/02/20/596e97be75cd6.jpg'); 
+   
+}
+.wrapperfewclouds{
+background: url('http://canitbesaturdaynow.com/images/fpics/1679/033120bd5d2cfd5c05653a107622e41d.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;
+}
+
+.wrapperscattercloud{
+  background: url('http://4.bp.blogspot.com/-l7O45LDVvNE/TxeeY8z9WzI/AAAAAAAAALY/nbAatGs-kRk/s1600/Scattered+Clouds+6-09_865.jpg'); 
+    background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;
+}
+.wrapperbrokenclod{
+background: url('https://undefinedcolors.files.wordpress.com/2013/09/img_3921.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;
+}
+
+.wrappershowerrain{
+  background: url('https://i.pinimg.com/originals/39/ff/00/39ff00e1649c44383c41ba88d4244583.jpg'); 
+    background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;
+}
+.wrapperrain{
+background: url('https://www.myjewishlearning.com/wp-content/uploads/2002/09/rain-umbrella.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;
+}
+
+.wrapperthnderstorm{
+background: url('https://www.homeadvisor.com/r/wp-content/uploads/2015/03/Dollarphotoclub_43826198-1024x680.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;
+}
+
+.wrappersnow{
+  background: url('https://static.bhphotovideo.com/explora/sites/default/files/Correct.jpg'); 
+    background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;
+}
+.wrappermist{
+	background: url('http://hddesktopwallpapers.in/wp-content/uploads/2015/09/mist-wallpaper-mountains.jpg');
+	  background-size: cover;
+  background-attachment: fixed; 
+  position: absolute;	
+}
 .weather{
   position: relative;
-  height: 295px;
+  height: 325px;
   width: 450px;
 background: #7abcff; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */

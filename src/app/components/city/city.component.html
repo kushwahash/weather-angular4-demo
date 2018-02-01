@@ -1,8 +1,17 @@
-
-<section class="webdesigntuts-workshop">
+	<section class="webdesigntuts-workshop">
+	
 	<form>
-		<input type="search" placeholder="City For Weather Report..." #city>
-		<button type="button" (click)="callWeatherService(city)">Search</button>
+		<input type="search" (keyup)="filterCity()" name="something" [(ngModel)]="inputCity" placeholder="City For Weather Report...">
+		
+		<button type="button" (click)="callWeatherService(inputCity)">Search</button>
+		
+		 <ul id="myUL" ng-if="showList">
+		    <li *ngFor="let cityus of filterCities" (click)="setValue(cityus)">
+            <a href="#">{{cityus.city}},{{cityus.zip}},{{cityus.state}}</a>
+            </li>
+        </ul>
 	</form>
+	</section>
 
-</section>
+
+ 

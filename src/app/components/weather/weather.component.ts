@@ -36,4 +36,13 @@ title = 'Weather Report';
     this.notloaded = false;
     console.log('In NGONit Call for Weather');
   }
+
+  setStyleClasses() {
+    const styleClass = {
+            'wrapper': true,
+            'wrappermist': (this.weather.icon === '50d' || this.weather.icon === '50n'),
+            'wrapperclearsky': (this.weather.icon === '01d' || this.weather.icon === '01n')
+        };
+        return styleClass;
+  }
 }

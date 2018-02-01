@@ -1,5 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin:400);
 
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0 px;
+    margin: 0 px;
+    margin-top: 43px;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    margin-left: -40px;
+    margin-right: 98px;
+    background-color: #000000; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 14px; /* Increase the font-size */
+    color: #ffffff; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+    animation: glow 800ms ease-out infinite alternate;
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #400040; /* Add a hover effect to all links, except for headers */
+}
+
 .webdesigntuts-workshop {
 	background: #151515;
 	height: 100%;

@@ -5,7 +5,7 @@ const PROXY_CONFIG = [
             "/getCityList",
             "/getWeatherByCity",
             "/getDefaultWeatherByCity",
-            "/need",
+            "/getUSCityList",
             "/to",
             "/proxy"
         ],

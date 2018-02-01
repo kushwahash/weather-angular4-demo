@@ -1,9 +1,20 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Droid+Sans">
 <div *ngIf="notloaded">
-<div class="wrapper">
+<!-- <div class="wrapper">-->
+<div  class="wrapper" [ngClass]="{
+		'wrapperclearsky': (weather.icon === '01d' || weather.icon === '01n'),
+		'wrapperfewclouds': (weather.icon === '02d' || weather.icon === '03n'),
+		'wrapperscattercloud': (weather.icon === '03d' || weather.icon === '03n'),
+		'wrapperbrokenclod': (weather.icon === '04d' || weather.icon === '04n'),
+		'wrappershowerrain': (weather.icon === '09d' || weather.icon === '09n'),
+		'wrapperrain': (weather.icon === '10d' || weather.icon === '10n'),
+		'wrapperthnderstorm': (weather.icon === '11d' || weather.icon === '11n'),
+		'wrappersnow': (weather.icon === '13d' || weather.icon === '13n'),
+		'wrappermist': (weather.icon === '50d' || weather.icon === '50n')
+		}">
   <div class="weather">
-    <div class="city"><h1>Toronto, On,  {{weather.country}}</h1></div>
+    <div class="city"><h1>{{weather.city}},  {{weather.country}}</h1></div>
           <div class="clearfix"></div>
 
     <div class="cont">
@@ -22,11 +33,17 @@
         <div class="low">
           Low: {{weather.minTemperature}}&deg;
         </div>
+        <div class="low">
+           Humidity: {{weather.humidity}}%
+        </div>
+        <div class="low">
+           Forecast: {{weather.description}}
+        </div>
       </div>
       <div class="clearfix"></div>
       <div class="left"><i class="fa fa-angle-left"></i></div>
       <div class="date"><p>{{date | date:'MM/dd/yyyy'}}</p></div>
-      <div class="right"><i class="fa fa-angle-right"></i></div>
+      <div class="right"><i class="fa fa-angle-right"></i></div>   
     </div>
   </div> <!-- weather -->
 </div> 
